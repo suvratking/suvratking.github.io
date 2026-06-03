@@ -4,6 +4,7 @@ const menuToggle = document.querySelector("#menu-toggle");
 const mobileNav = document.querySelector("#mobile-nav");
 const themeToggle = document.querySelector("#theme-toggle");
 const typedRole = document.querySelector("#typed-role");
+const themeColor = document.querySelector('meta[name="theme-color"]');
 const roles = [
   "Backend Java Developer",
   "Microservices Specialist",
@@ -16,6 +17,12 @@ const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 root.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
 
+function syncThemeColor() {
+  themeColor?.setAttribute("content", root.dataset.theme === "dark" ? "#080c14" : "#f8fafc");
+}
+
+syncThemeColor();
+
 function syncHeader() {
   header.classList.toggle("scrolled", window.scrollY > 8);
 }
@@ -27,6 +34,7 @@ themeToggle.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
   root.dataset.theme = nextTheme;
   localStorage.setItem("theme", nextTheme);
+  syncThemeColor();
 });
 
 menuToggle.addEventListener("click", () => {
