@@ -381,6 +381,14 @@ h3 {
   text-transform: uppercase;
 }
 
+.highlight-link,
+.company-line h4 a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--primary) 35%, transparent);
+  text-underline-offset: 4px;
+}
+
 .timeline {
   position: relative;
   display: grid;
@@ -430,9 +438,42 @@ h3 {
   color: var(--primary);
 }
 
-.experience-card h4 {
+.company-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 8px;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.company-line h4 {
+  margin-bottom: 0;
   font-size: 1.05rem;
+}
+
+.project-name {
+  margin-bottom: 8px;
+  color: var(--foreground);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.highlight-link:hover,
+.highlight-link:focus-visible,
+.company-line h4 a:hover,
+.company-line h4 a:focus-visible {
+  color: var(--primary-strong);
+  text-decoration-color: currentColor;
 }
 
 .period {

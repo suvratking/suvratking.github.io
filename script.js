@@ -9,6 +9,7 @@ const roles = [
   "Microservices Specialist",
   "Spring Boot Engineer",
   "Technical Lead",
+  "Lead Software Engineer"
 ];
 
 const savedTheme = localStorage.getItem("theme");
