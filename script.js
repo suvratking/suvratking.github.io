@@ -5,6 +5,8 @@ const mobileNav = document.querySelector("#mobile-nav");
 const themeToggle = document.querySelector("#theme-toggle");
 const typedRole = document.querySelector("#typed-role");
 const themeColor = document.querySelector('meta[name="theme-color"]');
+const year = document.querySelector('#years');
+
 const roles = [
   "Backend Java Developer",
   "Microservices Specialist",
@@ -12,6 +14,12 @@ const roles = [
   "Technical Lead",
   "Lead Software Engineer"
 ];
+
+function setYear() {
+  year.textContent = new Date().getFullYear();
+}
+
+setYear();
 
 const savedTheme = localStorage.getItem("theme");
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
