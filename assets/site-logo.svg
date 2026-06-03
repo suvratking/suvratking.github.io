@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Suvrata Kumar Hada">
+  <rect width="128" height="128" rx="30" fill="#0f172a"/>
+  <path d="M28 82c8 9 20 14 36 14 21 0 35-10 35-27 0-15-10-22-34-28-14-3-20-7-20-14 0-6 6-10 17-10 10 0 19 4 26 11l10-14C89 5 77 0 62 0 42 0 27 11 27 28c0 18 13 24 35 29 14 4 20 8 20 15 0 7-7 11-18 11-13 0-22-5-29-13L28 82z" fill="#ffffff" transform="translate(0 14)"/>
+  <path d="M25 104h78" stroke="#2dd4bf" stroke-width="9" stroke-linecap="round"/>
+</svg>
